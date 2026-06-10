@@ -23,15 +23,12 @@ function FormThem({
       </div>
 
       <div className="card-body">
-        {/* Trong HTML thường là <form>.
-            Trong React muốn bắt sự kiện submit thì thêm onSubmit. */}
+     
         <form onSubmit={xuLyThem}>
           <div className="mb-3">
             <label className="form-label">Tên sản phẩm</label>
 
-            {/* Input trong React nên có value và onChange.
-                value={ten} nghĩa là input lấy giá trị từ state ten.
-                onChange dùng để cập nhật state khi người dùng gõ. */}
+        
             <input
               type="text"
               className="form-control"
@@ -46,9 +43,7 @@ function FormThem({
           <div className="mb-3">
             <label className="form-label">Danh mục</label>
 
-            {/* Select cũng giống input:
-                value={loai}
-                onChange cập nhật setLoai */}
+         
             <select
               className="form-select"
               value={loai}
@@ -95,8 +90,7 @@ function FormThem({
           </div>
 
           <div className="d-flex gap-3">
-            {/* Trong HTML cũ nút có thể là type="button".
-                Nhưng trong React muốn submit form thì phải là type="submit". */}
+     
             <button type="submit" className="btn btn-primary flex-fill">
               Thêm sản phẩm
             </button>

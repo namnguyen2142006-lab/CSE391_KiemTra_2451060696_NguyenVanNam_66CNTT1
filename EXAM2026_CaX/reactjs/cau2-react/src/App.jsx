@@ -43,7 +43,6 @@ function App() {
       return;
     }
 
-    // Tạo object mới từ dữ liệu người dùng nhập.
     const doiTuongMoi = {
       id: danhSach.length + 1,
       ten: ten,
@@ -52,12 +51,8 @@ function App() {
       trangThai: trangThai,
     };
 
-    // Thêm object mới vào mảng danhSach.
-    // Không dùng push trực tiếp.
-    // Phải dùng setDanhSach để React render lại giao diện.
     setDanhSach([...danhSach, doiTuongMoi]);
 
-    // Reset form sau khi thêm.
     setTen("");
     setLoai("");
     setGia("");
@@ -66,7 +61,6 @@ function App() {
 
   return (
     <>
-      {/* Trong React: class phải đổi thành className */}
       <div className="container-fluid py-4">
         <div className="bg-primary text-white rounded-3 p-4 mb-4">
           <h2 className="fw-bold text-start">Quản lý danh sách sản phẩm</h2>
@@ -81,8 +75,6 @@ function App() {
           {/* Cột trái: Form thêm */}
           <div className="col-md-5 d-flex">
             <div className="w-100">
-              {/* Gọi component FormThem */}
-              {/* Truyền state và hàm setState xuống component con bằng props */}
               <FormThem
                 ten={ten}
                 setTen={setTen}
@@ -100,8 +92,6 @@ function App() {
           {/* Cột phải: Bảng danh sách */}
           <div className="col-md-7 d-flex">
             <div className="w-100">
-              {/* Gọi component BangDanhSach */}
-              {/* Truyền danhSach xuống để component con dùng map() hiển thị bảng */}
               <BangDanhSach danhSach={danhSach} />
             </div>
           </div>

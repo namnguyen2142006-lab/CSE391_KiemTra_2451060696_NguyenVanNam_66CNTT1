@@ -26,9 +26,7 @@ function BangDanhSach({ danhSach }) {
             </thead>
 
             <tbody>
-              {/* Trong HTML Câu 1, mình viết nhiều <tr> tĩnh.
-                  Sang React thì thay bằng map().
-                  map() duyệt mảng danhSach và tạo ra từng dòng bảng. */}
+           
               {danhSach.map(function (item, index) {
                 return (
                   <tr key={item.id}>
