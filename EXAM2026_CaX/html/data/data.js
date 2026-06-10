@@ -1,4 +1,4 @@
-const duLieuMau = [
+const products = [
   {
     id: 1,
     ten: "Điện thoại iPhone 15",
